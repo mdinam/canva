@@ -1,12 +1,8 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
+<<<<<<< HEAD
     <>
       <div>
         <a href="https://vite.dev" target="_blank">
@@ -33,6 +29,12 @@ function App() {
       </p>
     </>
   )
+=======
+    <div>
+      <h1>I love you Farah Sultana</h1>
+    </div>
+  );
+>>>>>>> bb4f1fc (first commit)
 }
 
-export default App
+export default App;
