@@ -1,6 +1,15 @@
-import "./App.css";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Index from "./pages";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Index />,
+  },
+]);
 
 function App() {
+<<<<<<< HEAD
   return (
 <<<<<<< HEAD
     <>
@@ -35,6 +44,9 @@ function App() {
     </div>
   );
 >>>>>>> bb4f1fc (first commit)
+=======
+  return <RouterProvider router={router} />;
+>>>>>>> 3045874 (app.jsx changed)
 }
 
 export default App;
