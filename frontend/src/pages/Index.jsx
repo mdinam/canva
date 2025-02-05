@@ -11,7 +11,28 @@ const Index = () => {
                 alt=""
               />
             </div>
+            <div className="flex gap-4">
+              <button className="py-2 w-[80px] text-center bg-teal-700 text-white transition-all hover:bg-teal-500 rounded-[5px] font-medium">
+                SignIn
+              </button>
+              <button className="py-2 w-[80px] text-center bg-purple-700 text-white transition-all hover:bg-purple-500 rounded-[5px] font-medium">
+                SignUp
+              </button>
+            </div>
           </div>
+        </div>
+      </div>
+      <div className="w-full flex justify-center items-center p-4">
+        <div className="flex flex-col justify-center items-center gap-6 py-[170px]">
+          <h2 className="text-5xl text-[#d8d4d4] font-bold">
+            What you will design today?
+          </h2>
+          <span className="text-[#aaa7a7] text-2xl font-medium">
+            Canva makes it easy to create and share professional designs
+          </span>
+          <button className="py-2 w-[200px] text-center bg-purple-700 text-white transition-all hover:bg-purple-500 rounded-[5px] font-medium">
+            SignUp for Free
+          </button>
         </div>
       </div>
     </div>
