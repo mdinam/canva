@@ -10,6 +10,8 @@ const Index = () => {
     email: "",
     password: "",
   });
+  const [type, setType] = useState("");
+
   console.log(state);
 
   const inputHandle = (e) => {
@@ -36,63 +38,137 @@ const Index = () => {
           <h2 className="text-white pb-4 text-center text-xl">
             Login and Sign up in seconds{" "}
           </h2>
-          <form>
-            <div className="flex flex-col gap-3 mb-3 text-white">
-              <label htmlFor="email">Email</label>
-              <input
-                onChange={inputHandle}
-                value={state.email}
-                className="px-3 py-2 rounded-md border outline-none border-[#5c5c5e] focus:border-purple-500 bg-transparent"
-                type="text"
-                id="email"
-                name="email"
-                placeholder="Email"
-              />
-            </div>
-            <div className="flex flex-col gap-3 mb-3 text-white">
-              <label htmlFor="password">Password</label>
-              <input
-                onChange={inputHandle}
-                value={state.password}
-                className="px-3 py-2 rounded-md border outline-none border-[#5c5c5e] focus:border-purple-500 bg-transparent"
-                type="password"
-                id="password"
-                name="password"
-                placeholder="Password"
-              />
-            </div>
-            <div>
-              <button className="px-3 py-2 rounded-md bg-purple-500 w-full outline-none hover:bg-purple-600 text-white">
-                Signin
-              </button>
-            </div>
-            <div className="flex py-4 justify-between items-center px-3">
-              <div className="w-[45%] h-[1px] bg-slate-500"></div>
-              <div className="w-[6%] text-center text-white flex pb-1 ">
-                {" "}
-                Or
+
+          {type === "signin" && (
+            <form>
+              <div className="flex flex-col gap-3 mb-3 text-white">
+                <label htmlFor="email">Email</label>
+                <input
+                  onChange={inputHandle}
+                  value={state.email}
+                  className="px-3 py-2 rounded-md border outline-none border-[#5c5c5e] focus:border-purple-500 bg-transparent"
+                  type="text"
+                  id="email"
+                  name="email"
+                  placeholder="Email"
+                />
               </div>
-              <div className="w-[45%] h-[1px] bg-slate-500"></div>
-            </div>
-            <div>
-              <button className="px-3 py-2 rounded-md bg-red-600 w-full outline-none mb-3 hover:bg-red-500 flex justify-center items-center gap-2 text-white">
-                <span>
+              <div className="flex flex-col gap-3 mb-3 text-white">
+                <label htmlFor="password">Password</label>
+                <input
+                  onChange={inputHandle}
+                  value={state.password}
+                  className="px-3 py-2 rounded-md border outline-none border-[#5c5c5e] focus:border-purple-500 bg-transparent"
+                  type="password"
+                  id="password"
+                  name="password"
+                  placeholder="Password"
+                />
+              </div>
+              <div>
+                <button className="px-3 py-2 rounded-md bg-purple-500 w-full outline-none hover:bg-purple-600 text-white">
+                  Signin
+                </button>
+              </div>
+              <div className="flex py-4 justify-between items-center px-3">
+                <div className="w-[45%] h-[1px] bg-slate-500"></div>
+                <div className="w-[6%] text-center text-white flex pb-1 ">
                   {" "}
-                  <SiGmail />
-                </span>
-                <span>Login with gmail</span>
-              </button>
-            </div>
-            <div>
-              <button className="px-3 py-2 rounded-md bg-blue-700 w-full outline-none mb-3 hover:bg-blue-500 flex justify-center items-center gap-2 text-white">
-                <span>
+                  Or
+                </div>
+                <div className="w-[45%] h-[1px] bg-slate-500"></div>
+              </div>
+              <div>
+                <button className="px-3 py-2 rounded-md bg-red-600 w-full outline-none mb-3 hover:bg-red-500 flex justify-center items-center gap-2 text-white">
+                  <span>
+                    {" "}
+                    <SiGmail />
+                  </span>
+                  <span>Login with gmail</span>
+                </button>
+              </div>
+              <div>
+                <button className="px-3 py-2 rounded-md bg-blue-700 w-full outline-none mb-3 hover:bg-blue-500 flex justify-center items-center gap-2 text-white">
+                  <span>
+                    {" "}
+                    <FaFacebook />
+                  </span>
+                  <span>Login with gmail</span>
+                </button>
+              </div>
+            </form>
+          )}
+          {type === "signup" && (
+            <form>
+              <div className="flex flex-col gap-3 mb-3 text-white">
+                <label htmlFor="name">Name</label>
+                <input
+                  onChange={inputHandle}
+                  value={state.name}
+                  className="px-3 py-2 rounded-md border outline-none border-[#5c5c5e] focus:border-purple-500 bg-transparent"
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Name"
+                />
+              </div>
+              <div className="flex flex-col gap-3 mb-3 text-white">
+                <label htmlFor="email">Email</label>
+                <input
+                  onChange={inputHandle}
+                  value={state.email}
+                  className="px-3 py-2 rounded-md border outline-none border-[#5c5c5e] focus:border-purple-500 bg-transparent"
+                  type="text"
+                  id="email"
+                  name="email"
+                  placeholder="Email"
+                />
+              </div>
+              <div className="flex flex-col gap-3 mb-3 text-white">
+                <label htmlFor="password">Password</label>
+                <input
+                  onChange={inputHandle}
+                  value={state.password}
+                  className="px-3 py-2 rounded-md border outline-none border-[#5c5c5e] focus:border-purple-500 bg-transparent"
+                  type="password"
+                  id="password"
+                  name="password"
+                  placeholder="Password"
+                />
+              </div>
+              <div>
+                <button className="px-3 py-2 rounded-md bg-purple-500 w-full outline-none hover:bg-purple-600 text-white">
+                  Register
+                </button>
+              </div>
+              <div className="flex py-4 justify-between items-center px-3">
+                <div className="w-[45%] h-[1px] bg-slate-500"></div>
+                <div className="w-[6%] text-center text-white flex pb-1 ">
                   {" "}
-                  <FaFacebook />
-                </span>
-                <span>Login with gmail</span>
-              </button>
-            </div>
-          </form>
+                  Or
+                </div>
+                <div className="w-[45%] h-[1px] bg-slate-500"></div>
+              </div>
+              <div>
+                <button className="px-3 py-2 rounded-md bg-red-600 w-full outline-none mb-3 hover:bg-red-500 flex justify-center items-center gap-2 text-white">
+                  <span>
+                    {" "}
+                    <SiGmail />
+                  </span>
+                  <span>Login with gmail</span>
+                </button>
+              </div>
+              <div>
+                <button className="px-3 py-2 rounded-md bg-blue-700 w-full outline-none mb-3 hover:bg-blue-500 flex justify-center items-center gap-2 text-white">
+                  <span>
+                    {" "}
+                    <FaFacebook />
+                  </span>
+                  <span>Login with gmail</span>
+                </button>
+              </div>
+            </form>
+          )}
         </div>
       </div>
 
@@ -106,11 +182,23 @@ const Index = () => {
                 alt=""
               />
             </div>
-            <div onClick={() => setShow(true)} className="flex gap-4">
-              <button className="py-2 w-[80px] text-center bg-teal-700 text-white transition-all hover:bg-teal-500 rounded-[5px] font-medium">
+            <div className="flex gap-4">
+              <button
+                onClick={() => {
+                  setType("signin");
+                  setShow(true);
+                }}
+                className="py-2 w-[80px] text-center bg-teal-700 text-white transition-all hover:bg-teal-500 rounded-[5px] font-medium"
+              >
                 SignIn
               </button>
-              <button className="py-2 w-[80px] text-center bg-purple-700 text-white transition-all hover:bg-purple-500 rounded-[5px] font-medium">
+              <button
+                onClick={() => {
+                  setType("signup");
+                  setShow(true);
+                }}
+                className="py-2 w-[80px] text-center bg-purple-700 text-white transition-all hover:bg-purple-500 rounded-[5px] font-medium"
+              >
                 SignUp
               </button>
             </div>
@@ -125,7 +213,13 @@ const Index = () => {
           <span className="text-[#aaa7a7] text-2xl font-medium">
             Canva makes it easy to create and share professional designs
           </span>
-          <button className="py-2 w-[200px] text-center bg-purple-700 text-white transition-all hover:bg-purple-500 rounded-[5px] font-medium">
+          <button
+            onClick={() => {
+              setType("signin");
+              setShow(true);
+            }}
+            className="py-2 w-[200px] text-center bg-purple-700 text-white transition-all hover:bg-purple-500 rounded-[5px] font-medium"
+          >
             SignUp for Free
           </button>
         </div>
